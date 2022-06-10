@@ -18,7 +18,7 @@ export const AuthProvider = ({children}) => {
 
     let loginUser = async (e)=> {
         e.preventDefault()
-        let response = await fetch('/token/', {
+        let response = await fetch('https://wolfrollerapi.azurewebsites.net/api/token/', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let updateToken = async () => {
-        let response = await fetch('/token/refresh/', {
+        let response = await fetch('https://wolfrollerapi.azurewebsites.net/api/token/refresh/', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
