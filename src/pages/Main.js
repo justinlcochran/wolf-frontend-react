@@ -31,7 +31,7 @@ function Main(props) {
 
 
     useEffect(() => {
-        fetch(`'https://wolfrollerapi.azurewebsites.net/api/main/${user.user_id}/`)
+        fetch(`https://wolfrollerapi.azurewebsites.net/api/main/${user.user_id}/`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -141,7 +141,7 @@ function Main(props) {
 
         if (!equalsIgnoreOrder(players, data.players.map(item => item.name)) || !equalsIgnoreOrder(Object.entries(roleTypes).filter(item => item[1]).map(item => item[0]), Object.entries(JSON.parse(data.parameters.typePreferences)).filter(item => item[1]).map(item => item[0]))) {
 
-            const serverURL = 'https://wolfrollerapi.azurewebsites.net/api//rollChange/'
+            const serverURL = 'https://wolfrollerapi.azurewebsites.net/api/rollChange/'
             const response = await fetch(serverURL, {
                 method: "POST",
                 headers: {
