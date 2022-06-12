@@ -4,7 +4,7 @@ import AuthContext from "../context/AuthContext";
 function Login(props) {
     let {loginUser} = useContext(AuthContext)
     return (
-        <div className="center m-6 w-full max-w-xs my-40">
+        <div className="center m-6 w-full max-w-xs my-auto">
             <form className="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={loginUser}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
